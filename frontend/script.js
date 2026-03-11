@@ -8,7 +8,6 @@ const name = nameInput.value
 const email = emailInput.value
 const message = messageInput.value
 
-// validation
 if(!name || !email || !message){
 alert("Please fill all fields")
 return
@@ -16,7 +15,7 @@ return
 
 try{
 
-const response = await fetch("https://portfolio1-n65b.onrender.com",{
+const response = await fetch("https://portfolio1-n65b.onrender.com/api/contact",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
@@ -28,10 +27,9 @@ const data = await response.json()
 
 alert(data.message || "Message Sent!")
 
-// clear form fields after sending
-nameInput.value = ""
-emailInput.value = ""
-messageInput.value = ""
+nameInput.value=""
+emailInput.value=""
+messageInput.value=""
 
 }catch(error){
 
