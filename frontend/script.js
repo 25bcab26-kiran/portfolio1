@@ -15,7 +15,7 @@ return
 
 try{
 
-const response = await fetch("https://portfolio1-n65b.onrender.com/api/contact",{
+const response = await fetch("https://portfolio1-1-kuq4.onrender.com/api/contact",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"
